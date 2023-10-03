@@ -45,14 +45,41 @@
             if (guess == item)
                 return middle;
 
-            if (guess > item)
+            return (guess > item)
+                ? Search(list, item, low, middle - 1)
+                : Search(list, item, middle + 1, high);
+        }
+    }
+
+    public class BinaryStringTypeSearch : ISearchStringTypeStrategy
+    {
+        public int Search(IEnumerable<string> list, string item, int low = -1, int high = -1)
+        {
+            int step = 0;
+
+            while (low <= high)
             {
-                return Search(list, item, low, middle - 1);
+                step++;
+
+                Console.WriteLine($"Step: {step}");
+
+                var middle = (low + high) / 2;
+                var guess = list.ElementAt(middle);
+
+                if (guess == item)
+                    return middle;
+
+                if (guess.Equals(item))
+                {
+                    high = middle - 1;
+                }
+                else
+                {
+                    low = middle + 1;
+                }
             }
-            else
-            {
-                return Search(list, item, middle + 1, high);
-            }
+
+            return -1;
         }
     }
 }
