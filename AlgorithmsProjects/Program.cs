@@ -86,6 +86,9 @@ var context = new ContextStringTypeStrategy(new BinaryStringTypeSearch());
 var ind = context.Execute(strList, "dvhwtjxlqcgwjuvr");
 
 
+
+
+//GIT test
 //GIT test
 //GIT test
 //GIT test
