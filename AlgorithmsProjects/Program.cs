@@ -50,41 +50,47 @@ using AlgorithmsProjects.Core;
 using System.Drawing;
 using System;
 
-//var context = new ContextStrategy(new BinarySearch());
+var context = new ContextStrategy(new BinarySearch());
 //var context = new ContextStrategy(new RecursiveBinarySearch());
 
 //var ind = context.Execute(Enumerable.Range(0, 2000000000), 60101);
 //var ind = context.Execute(Enumerable.Range(0, 10005000).Select(s => s * 2 + 1), 60101);
 //var ind = context.Execute(new int[] { 1, 3, 5, 7, 9 }, 7);
 
+var ind = context.Execute(Enumerable.Range(0, 100), 5);
 
 
-var generator = new Random();
-var length = 16;
-var count = 100;
-var strList = new string[count];
-const string src = "abcdefghijklmnopqrstuvwxyz0123456789";
-
-for (var j = 0; j < count; j++)
-{
-    //for (var i = 0; i < length; i++)
-    //{
-    //    //strList[j] += ((char)(generator.Next(1, 26) + 64)).ToString().ToLower();
-
-    //    Console.WriteLine();
-    //}
-
-    //for (int i = 0; i < size; i++)
-    {
-        Console.WriteLine(Convert.ToChar(Convert.ToInt32(j + 65)));
-        //builder.Append(ch);
-    }
-}
 
 
-var context = new ContextStringTypeStrategy(new BinaryStringTypeSearch());
-var ind = context.Execute(strList, "dvhwtjxlqcgwjuvr");
+//==========================
 
+//var generator = new Random();
+//var length = 16;
+//var count = 100;
+//var strList = new string[count];
+//const string src = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+//for (var j = 0; j < count; j++)
+//{
+//    //for (var i = 0; i < length; i++)
+//    //{
+//    //    //strList[j] += ((char)(generator.Next(1, 26) + 64)).ToString().ToLower();
+
+//    //    Console.WriteLine();
+//    //}
+
+//    //for (int i = 0; i < size; i++)
+//    {
+//        Console.WriteLine(Convert.ToChar(Convert.ToInt32(j + 65)));
+//        //builder.Append(ch);
+//    }
+//}
+
+
+//var context = new ContextStringTypeStrategy(new BinaryStringTypeSearch());
+//var ind = context.Execute(strList, "dvhwtjxlqcgwjuvr");
+
+//==========================
 
 
 
